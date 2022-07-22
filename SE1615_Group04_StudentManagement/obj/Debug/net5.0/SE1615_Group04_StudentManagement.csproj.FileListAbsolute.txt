@@ -162,8 +162,6 @@ C:\LearnFPT\Term_5\PRN_Final\SE1615_Group04_StudentManagement\SE1615_Group04_Stu
 C:\LearnFPT\Term_5\PRN_Final\SE1615_Group04_StudentManagement\SE1615_Group04_StudentManagement\obj\Debug\net5.0\Razor\Views\CourseClasses\Details.cshtml.g.cs
 C:\LearnFPT\Term_5\PRN_Final\SE1615_Group04_StudentManagement\SE1615_Group04_StudentManagement\obj\Debug\net5.0\Razor\Views\CourseClasses\Edit.cshtml.g.cs
 C:\LearnFPT\Term_5\PRN_Final\SE1615_Group04_StudentManagement\SE1615_Group04_StudentManagement\obj\Debug\net5.0\Razor\Views\CourseClasses\Index.cshtml.g.cs
-C:\LearnFPT\Term_5\PRN_Final\SE1615_Group04_StudentManagement\SE1615_Group04_StudentManagement\bin\Debug\net5.0\ref\SE1615_Group04_StudentManagement.dll
-C:\LearnFPT\Term_5\PRN_Final\SE1615_Group04_StudentManagement\SE1615_Group04_StudentManagement\obj\Debug\net5.0\staticwebassets\SE1615_Group04_StudentManagement.StaticWebAssets.xml
 C:\LearnFPT\Term_5\PRN_Final\SE1615_Group04_StudentManagement\SE1615_Group04_StudentManagement\obj\Debug\net5.0\Razor\Views\Accounts\Create.cshtml.g.cs
 C:\LearnFPT\Term_5\PRN_Final\SE1615_Group04_StudentManagement\SE1615_Group04_StudentManagement\obj\Debug\net5.0\Razor\Views\Accounts\Delete.cshtml.g.cs
 C:\LearnFPT\Term_5\PRN_Final\SE1615_Group04_StudentManagement\SE1615_Group04_StudentManagement\obj\Debug\net5.0\Razor\Views\Accounts\Details.cshtml.g.cs
@@ -174,3 +172,5 @@ C:\LearnFPT\Term_5\PRN_Final\SE1615_Group04_StudentManagement\SE1615_Group04_Stu
 C:\LearnFPT\Term_5\PRN_Final\SE1615_Group04_StudentManagement\SE1615_Group04_StudentManagement\obj\Debug\net5.0\Razor\Views\Exercices\Details.cshtml.g.cs
 C:\LearnFPT\Term_5\PRN_Final\SE1615_Group04_StudentManagement\SE1615_Group04_StudentManagement\obj\Debug\net5.0\Razor\Views\Exercices\Edit.cshtml.g.cs
 C:\LearnFPT\Term_5\PRN_Final\SE1615_Group04_StudentManagement\SE1615_Group04_StudentManagement\obj\Debug\net5.0\Razor\Views\Exercices\Index.cshtml.g.cs
+C:\LearnFPT\Term_5\PRN_Final\SE1615_Group04_StudentManagement\SE1615_Group04_StudentManagement\bin\Debug\net5.0\ref\SE1615_Group04_StudentManagement.dll
+C:\LearnFPT\Term_5\PRN_Final\SE1615_Group04_StudentManagement\SE1615_Group04_StudentManagement\obj\Debug\net5.0\staticwebassets\SE1615_Group04_StudentManagement.StaticWebAssets.xml
