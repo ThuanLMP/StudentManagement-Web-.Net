@@ -1,0 +1,66 @@
+﻿@model IEnumerable<SE1615_Group04_StudentManagement.Models.Student>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>STUDENTS</h1>
+
+<form asp-action="Index">
+    <div class="col-md-4">
+         <div class="form-group">
+                <label class="control-label">StudentID:</label>
+                <input type="text" name="sid" class="form-control" />
+          </div>
+        <input type="submit" value="Search" class="btn btn-primary" />
+    </div>
+</form>
+<br />
+<br />
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+             <th>
+                @Html.DisplayNameFor(model => model.Studentid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Class)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Studentid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Class.Classid)
+            </td>
+            
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Studentid">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Studentid">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Studentid">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

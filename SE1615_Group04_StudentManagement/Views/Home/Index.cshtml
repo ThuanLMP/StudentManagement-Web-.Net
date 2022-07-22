@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@using Microsoft.AspNetCore.Http;
+@inject IHttpContextAccessor HttpContextAccessor;
+@{
+    String name = HttpContextAccessor.HttpContext.Session.GetString("UserName");
+}
+<div class="text-center">
+    <h1 class="display-4">Welcome Home</h1>
+    <h2>Student Management</h2>
+    @if (name == "admin")
+    {
+        <h3>You are Admin</h3>
+    }
+    else
+    {
+        <h3>You are Student</h3>
+    }
+
+</div>

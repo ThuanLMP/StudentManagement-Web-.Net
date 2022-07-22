@@ -1,0 +1,119 @@
+﻿@model SE1615_Group04_StudentManagement.Models.Class
+@using Microsoft.AspNetCore.Http;
+@inject IHttpContextAccessor HttpContextAccessor;
+@{
+    String name = HttpContextAccessor.HttpContext.Session.GetString("UserName");
+}
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Class</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Classid)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Classid)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Startdate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Startdate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Enddate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Enddate)
+        </dd>
+    </dl>
+</div>
+<div>
+    @if (name == "admin")
+    {
+        <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model.Classid">Edit Class</a>
+    }
+    <br />
+    <br />
+</div>
+
+<div>
+    <h4>Subject in Class: </h4>
+    @foreach (CourseClass c in (List<CourseClass>)ViewData["listCourse"])
+    {
+        @Html.DisplayFor(CourseItem => c.Subjectid) <h5> </h5>
+    }
+    @if (name == "admin" && (int)ViewData["listSize"] > 0)
+    {
+        <a class="btn btn-primary" asp-controller="CourseClasses" asp-action="Index" asp-route-id="@Model.Classid">Manager Subject in Class</a>
+    }
+
+    @if (name == "admin" && (int)ViewData["listSize"] == 0)
+    {
+        <a class="btn btn-primary" asp-controller="CourseClasses" asp-action="Create" asp-route-id="@Model.Classid">Add Subject to @Model.Classid</a>
+    }
+
+</div>
+
+
+<br />
+<p>Number Student in Class: @ViewData["size"] </p>
+
+<br />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                StudentID
+            </th>
+            <th>
+                StudentName
+            </th>
+            <th>
+                ClassID
+            </th>
+            <th>
+                Gmail
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Student s in (List<Student>)ViewData["Students"])
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => s.Studentid)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => s.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => s.Classid)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => s.Gmail)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

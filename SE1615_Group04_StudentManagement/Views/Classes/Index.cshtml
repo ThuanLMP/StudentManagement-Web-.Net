@@ -1,0 +1,73 @@
+﻿@model IEnumerable<SE1615_Group04_StudentManagement.Models.Class>
+@using Microsoft.AspNetCore.Http;
+@inject IHttpContextAccessor HttpContextAccessor;
+@{ 
+    String name = HttpContextAccessor.HttpContext.Session.GetString("UserName");
+}
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>CLASS</h1>
+
+@if (name == "admin")
+{
+    <p>
+        <a asp-action="Create">Create Class</a>
+    </p>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Classid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Startdate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Enddate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Classid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Startdate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Enddate)
+            </td>
+            @if (name == "admin")
+            {
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Classid">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Classid">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Classid">Delete</a>
+                </td>
+            }
+            else
+            {
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.Classid">Details</a> |
+                </td>
+            }
+
+
+        </tr>
+}
+    </tbody>
+</table>
